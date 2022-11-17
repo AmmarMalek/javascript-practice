@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <input type="number" name="" id="num1" placeholder="Enter first Number ">
+    <br>
+    <br>
+    <br>
+    <input type="number" name="" id="num2" placeholder="Enter Second Number">
+    <br>
+    <br>
+
+    <p id="res"></p>
+
+
+    <!-- for method 2 -->
+
+    <!-- 
+    <input type="submit" value="+" onclick="cal('+')">
+    <input type="submit" value="-" onclick="cal('-')">
+    <input type="submit" value="*" onclick="cal('*')">
+    <input type="submit" value="/" onclick="cal('/')">
+    <input type="submit" value="%" onclick="cal('%')"> -->
+
+
+    <!-- for method 3  -->
+
+    <input type="submit" value="+">
+    <input type="submit" value="-">
+    <input type="submit" value="*">
+    <input type="submit" value="/">
+    <input type="submit" value="%">
+
+
+    <!-- method 1 -->
+
+    <!-- <button>+</button>
+    <button>-</button>
+    <button>/</button>
+    <button>*</button>
+    <button>%</button> -->
+
+
+    <script>
+
+
+        var input1El = document.getElementById("num1"),
+            input2El = document.getElementById("num2"),
+            pEl = document.getElementById("res");
+
+        // method 1 
+
+        //     buttonel = document.querySelectorAll("button");
+
+        //     buttonel.forEach(element => { 
+        //     element.addEventListener("click", () =>{
+        //         cal(element.innerHTML)
+        //     } )
+        //    });
+
+
+        //    <================// method 3 =====================>
+
+
+        inputel = document.querySelectorAll("input[type= 'submit']")
+
+        console.log(inputel);
+
+        inputel.forEach(element => {
+            console.log(element.value);
+            element.addEventListener("click", () => {
+                cal(element.value)
+            })
+        });
+
+
+
+        //    <================// method 2  =====================>
+
+
+        function cal(event) {
+            switch (event) {
+                case "+": pEl.innerText = parseInt(input1El.value) + parseInt(input2El.value)
+                    break;
+
+                case "-": pEl.innerText = parseInt(input1El.value) - parseInt(input2El.value)
+                    break;
+
+                case "/": pEl.innerText = parseInt(input1El.value) / parseInt(input2El.value)
+                    break;
+
+                case "*": pEl.innerText = parseInt(input1El.value) * parseInt(input2El.value)
+                    break;
+
+                case "%": pEl.innerText = parseInt(input1El.value) % parseInt(input2El.value)
+                    break;
+            }
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

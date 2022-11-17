@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <p id="p_tag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis odio vero nisi consequuntur rerum possimus quasi debitis iure? Laborum, facilis! Sit optio sed nesciunt corrupti iste quod expedita. Eligendi, tempore?</p>
+
+
+    <button id="show" onclick="show()">Show</button>
+    <button id="hide" onclick="hide()">Hide</button>
+    <button id="show_hide" onclick="show_hide()">Show / Hide</button>
+    
+
+
+    <script>
+        var p_tag = document.getElementById("p_tag");
+        
+        console.log(p_tag);
+
+        function show(){
+            // alert("hi")
+            p_tag.style.display = "block";
+        }
+
+        function hide(){
+            p_tag.style.display = "none"
+        }
+
+        function show_hide(){
+            if(p_tag.style.display == "none"){
+                show();
+            }
+            else{
+                hide();
+            }
+        }
+    </script>
+</body>
+</html>

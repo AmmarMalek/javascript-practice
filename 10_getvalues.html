@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <a href="test.html" id="link">Link</a>
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima nostrum asperiores eum nemo iste eveniet itaque, quam ut, pariatur, quasi ab placeat vitae quibusdam. Sed labore laborum molestiae deleniti accusamus!</p>
+    <img src="test.jpg" alt="" id="img">
+    <input type="text" name="" id="inp" value="ammar">
+    <br>
+
+<script>
+    var a = document.getElementById("link");
+    document.write(a.innerHTML);
+    document.write("<br>");
+
+    
+    var b = document.getElementById("para");
+    document.write(b.innerHTML);  
+    document.write("<br>");
+
+
+    var c = document.getElementById("img");
+    document.write(c.src);  
+    document.write("<br>");
+
+
+    var d = document.getElementById("inp");
+    document.write(d.value);
+    document.write("<br>");
+</script>
+</body>
+</html>

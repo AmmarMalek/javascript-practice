@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if elseif else</title>
+</head>
+<body>
+    
+
+<script>
+    phy = 90;
+    chem = 95;
+    maths = 90;
+
+    total = phy + chem + maths;
+    document.write("Total Marks = ");
+    document.write(total);
+    document.write("<br>");
+    percentage = total/3;
+    document.write("percentage = ");
+    document.write(percentage);
+    document.write("<br>");
+
+    if(percentage >= 90)
+    {
+        document.write("Grade A");
+    }
+    else if(percentage >= 70){
+        document.write("Grade B");
+    }
+    else if(percentage >= 50){
+        document.write("Grade C");
+    }
+    else if(percentage >= 40){
+        document.write("Grade D");
+    }
+    else{
+        document.write("Fail")
+    }
+</script>
+
+
+</body>
+</html>
