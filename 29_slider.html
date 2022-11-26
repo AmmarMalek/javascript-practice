@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+    <style>
+        .anim
+		{
+			animation: scaleIt 3s;
+		}
+		
+		@keyframes scaleIt
+
+		{
+			from{transform: scale(1.0);}
+			to {transform: scale(1.5);}
+		}
+    </style>
+</head>
+<body>
+    
+    <img src="https://blogs-images.forbes.com/jimgorzelany/files/2016/12/zenvo-st1-2009_848.jpeg" class="i1" height="450px" width="100%">
+
+	<img src="https://th.bing.com/th/id/R.ea49523df30f16d2ad6c78db93b74c90?rik=Ip3icfgtRvYWYA&riu=http%3a%2f%2f4.bp.blogspot.com%2f-l9fDxBNirLo%2fT5-_q5ijWTI%2fAAAAAAAABQM%2ftQeQz48EX3g%2fs1600%2fall%2bford%2bcars-7.jpg&ehk=i4eo1Wnr65BtLXQP7S3K%2bgfyeayrv1Q8RQAD8pEVdm4%3d&risl=&pid=ImgRaw&r=0" class="i1" height="450px" width="100%">
+
+	<img src="https://media.autoexpress.co.uk/image/private/s--vmBM6baC--/v1572026862/autoexpress/2019/10/img_20191023_115631.jpg" class="i1" height="450px" width="100%">
+
+	<img src="https://th.bing.com/th/id/OIP.T8_NY5J47WVGD-lUCSifMgHaEK?pid=ImgDet&rs=1" class="i1" height="450px" width="100%">
+
+<script>
+    index = 0;
+    function slider()
+    {
+        var img_arr = document.getElementsByClassName('i1');
+
+        for(i=0;i<img_arr.length;i++){
+            img_arr[i].style.display = "none";
+        }
+
+        img_arr[index].style.display = "block";
+        img_arr[index].classList.add('anim');
+        index++;
+
+        if(index==4){
+            index = 0;
+        }
+        setTimeout("slider()", 1000);
+    }    
+    slider();
+</script>
+
+</body>
+</html>
