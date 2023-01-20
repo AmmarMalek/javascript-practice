@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/30fdf6eef9.js" crossorigin="anonymous"></script>
+    <title>Navbar</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .navbar{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: blue;
+            color: white;
+            padding: 20px 100px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 2;
+        }
+        .navbar .nav-links a{
+            text-decoration: none;
+            color: white;
+            font-size: 25px;
+            text-transform: capitalize;
+            margin-left: 20px;
+        }
+        .navbar i{
+            font-size: 30px;
+            color: white;
+        }
+        @media(max-width: 713px){
+            .navbar .nav-links{
+                position: absolute;
+                top: 100%;
+                right: 0;
+                left: 0; 
+                background-color: blue;
+                border-top: 1.6px solid rgba(0, 0, 255, .2);
+                transform: translateY(-130%);
+                transition: 1s;
+                /* z-index: -1; */
+            }
+            .navbar .nav-links a{
+                display: block;
+                border-radius: 10px;
+                padding: 25px;
+                margin: 25px 0;
+                background-color: #222;
+            }
+        }
+        .navbar .nav-links.active{
+            transform: translateY(0%);
+        }
+    </style>
+</head>
+<body>
+    
+<div class="navbar">
+    <div class="logo">
+        <h1>Logo</h1>
+    </div>
+    <div class="nav-links">
+        <a href="#">home</a>
+        <a href="#">about</a>
+        <a href="#">contact</a>
+        <a href="#">services</a>
+    </div>
+    <a href="#" ><i class="fa-solid fa-bars" id="menu_bar"></i></a>
+</div>
+
+
+<script>
+    let menu = document.getElementById('menu_bar');
+    let navbar = document.querySelector('.nav-links');
+
+    menu.addEventListener('click', () => {
+        menu.classList.toggle('fa-xmark');
+        navbar.classList.toggle('active');
+});
+</script>
+</body>
+</html>
